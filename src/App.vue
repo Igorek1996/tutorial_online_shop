@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>Hello Vue!</p>
     <vMainWrapperVue />
   </div>
 </template>
@@ -8,7 +7,7 @@
 <script>
 import vMainWrapperVue from './components/v-main-wrapper.vue';
 
-export default {  
+export default {
   name: 'App',
   components: {
     vMainWrapperVue
