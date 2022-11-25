@@ -1,19 +1,23 @@
 <template>
     <div class="v-cart">
+        <router-link :to="{ name: 'catalog' }">
+            <div class="v-catalog__link_to_cart">Back to catalog</div>
+        </router-link>
         <h1>Cart</h1>
-        <vCartItemVue v-for="(item, index) in cart_data" :key="item.article" :cart_item_data="item"
+        <p v-if="!cart_data.length">There is no products in cart...</p>
+        <vCartItem v-for="(item, index) in cart_data" :key="item.article" :cart_item_data="item"
             @deleteFromCar="deleteFromCar(index)" />
     </div>
 </template>
 
 <script>
-import vCartItemVue from './v-cart-item.vue';
+import vCartItem from './v-cart-item.vue';
 import { mapActions } from 'vuex';
 
 export default {
     name: "v-cart",
     components: {
-        vCartItemVue,
+        vCartItem,
     },
     props: {
         cart_data: {

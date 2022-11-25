@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <vMainWrapperVue />
+    <vMainWrapper />
   </div>
 </template>
 
 <script>
-import vMainWrapperVue from './components/v-main-wrapper.vue';
+import vMainWrapper from './components/v-main-wrapper.vue';
 
 export default {
   name: 'App',
   components: {
-    vMainWrapperVue
+    vMainWrapper
   }
 }
 </script>
